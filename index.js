@@ -48,7 +48,14 @@ console.log(outputString);
 }
 
 function total() {
-  // write your code here
+  var value = 0;
+  var keys = [];
+
+  for (var i = 0; i < cart.length; i++){
+    keys.push( Object.keys(cart[i])[0]);
+    value += cart[i][keys[i]];
+  }
+  return value;
 }
 
 function removeFromCart(item) {
